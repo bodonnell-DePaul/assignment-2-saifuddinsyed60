@@ -10,6 +10,7 @@ function ViewPort(){
             <Row>
                 <Col><h1>Assignment 2: Syed's ToDo List   </h1></Col>
             </Row>
+            <br></br> <br></br>
             <Row>
                 <Col><ToDoItems></ToDoItems></Col>
             </Row>
