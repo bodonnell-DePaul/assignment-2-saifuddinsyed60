@@ -5,7 +5,7 @@
     aliquip ex ea commodo consequat. Duis aute irure dolor in
     reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum.`, dueDate: '2024-04-03' },
+    culpa qui officia deserunt mollit anim id est laborum.`, dueDate: '2024-10-14' },
 
     { title: 'Todo 2', description: `Sed auctor nunc nec nisi ultrices, in molestie nibh mattis. 
     Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 

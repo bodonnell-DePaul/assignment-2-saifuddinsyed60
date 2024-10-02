@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ToDoItems from "./Scheduler";
 import './ViewPort.css';
+import ToDoCreator from "./ToDoCreator";
 
 function ViewPort(){
     return (
@@ -12,6 +13,7 @@ function ViewPort(){
             </Row>
             <br></br> <br></br>
             <Row>
+                <Col><ToDoCreator></ToDoCreator></Col>
                 <Col><ToDoItems></ToDoItems></Col>
             </Row>
         </Container>
