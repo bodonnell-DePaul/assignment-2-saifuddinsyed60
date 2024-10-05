@@ -5,7 +5,7 @@ import itemData from './itemList.json'
 
 function Scheduler() {
 
-  const [items, setItems] = useState(itemData); 
+  const [items, setItems] = useState(itemData);
 
   const handleBlur = (index, e) => {
     // Save the description when the contentEditable loses focus
@@ -18,9 +18,9 @@ function Scheduler() {
     setItems(updatedItems);
   };
 
-  const updateDate=(index,newDate)=> {
-    const updatedItems=[...items];
-    updatedItems[index].dueDate=newDate;
+  const updateDate = (index, newDate) => {
+    const updatedItems = [...items];
+    updatedItems[index].dueDate = newDate;
     setItems(updatedItems);
 
   }
@@ -31,6 +31,7 @@ function Scheduler() {
 
     // Calculate the difference in days between the due date and today
     const timeDiff = (itemDate - currentDate) / (1000 * 60 * 60 * 24);
+    //1000->miliseconds in 1 second,60->seconds in 1 minute,60->minutes in 1 hour,24->hours in one day
 
     // Determine the color variant based on the logic provided
     if (timeDiff > 7) {
@@ -51,36 +52,34 @@ function Scheduler() {
         <ListGroup>
           <Row>
             <Col sm={3}>
-              <Nav  className="flex-column">
-              
+              <Nav className="flex-column">
+
                 {items.map((item, index) => (
-                  <ListGroup.Item eventKey={index} variant={getColor(index)}>
-                  <Nav.Item>
-                    <Nav.Link eventKey={index}>{item.title}</Nav.Link>
-                  </Nav.Item>
+                  <ListGroup.Item key={index} eventKey={index} variant={getColor(index)} className="mb-2 w-100">
+                    <Nav.Link eventKey={index} href={`#${index}`} >{item.title}</Nav.Link>
                   </ListGroup.Item>
                 ))}
-                
+
               </Nav>
             </Col>
-            <Col sm={9}>
-         
+            <Col sm={5}>
+
               <Tab.Content>
                 {items.map((item, index) => (
                   <Tab.Pane eventKey={index}>
-                    
+
                     <div contentEditable onBlur={(e) => handleBlur(index, e)}>
-                  
+
                       {item.description}
-                      </div>
-                    
-                    <input type="date" id="test" value={item.dueDate} onChange={(e)=>updateDate(index,e.target.value)} />
+                    </div>
+
+                    <input type="date" id="test" value={item.dueDate} onChange={(e) => updateDate(index, e.target.value)} />
                   </Tab.Pane>
-              
+
 
                 ))}
               </Tab.Content>
-              
+
             </Col>
 
           </Row>

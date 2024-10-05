@@ -4,7 +4,7 @@ function ToDoCreator() {
     return (
         <div class="form1">
         <Form>
-            <Row className="mb-3">
+            <Row className="mb-1">
                 <Form.Group className="mb-3" controlId="ToDoItemInput">
                     <Form.Label>ToDo Item</Form.Label>
                     <Form.Control className="w-85" placeholder="Add todo item" />
