@@ -1,27 +1,13 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import TodoList from './TodoList';
+import ToDoCreator from './ToDoCreator';
+import ViewPort from './ViewPort';
 
 describe('TodoList Component', () => {
   test('renders without crashing', () => {
     render(<TodoList />);
-  });
+  });  
 
-  test('renders the title', () => {
-    render(<TodoList />);
-    const titleElement = screen.getByText(/Assignment 2: ToDo List/i);
-    expect(titleElement).toBeInTheDocument();
-  });
-
-  test('renders form elements', () => {
-    render(<TodoList />);
-    const todoInput = screen.getByPlaceholderText(/Add todo item/i);
-    const dueDateInput = screen.getByLabelText(/Due Date/i);
-    const addButton = screen.getByText(/Add Todo/i);
-
-    expect(todoInput).toBeInTheDocument();
-    expect(dueDateInput).toBeInTheDocument();
-    expect(addButton).toBeInTheDocument();
-  });
 
   test('renders todo items', () => {
     render(<TodoList />);

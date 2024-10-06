@@ -1,6 +1,7 @@
 import { render, screen,fireEvent } from '@testing-library/react';
 import App from './App';
 import TodoList from './ToDoList';
+import ViewPort from './ViewPort';
 
 describe('TodoList Component', () => {
   test('renders without crashing', () => {
@@ -8,7 +9,7 @@ describe('TodoList Component', () => {
   });
 
   test('renders the title', () => {
-    render(<TodoList />);
+    render(<ViewPort />);
     const titleElement = screen.getByText(/Assignment 2: ToDo List/i);
     expect(titleElement).toBeInTheDocument();
   });

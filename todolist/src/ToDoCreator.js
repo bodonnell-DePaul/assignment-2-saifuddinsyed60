@@ -12,7 +12,7 @@ function ToDoCreator() {
             </Row>
 
             <Row className="mb-3">
-                <Form.Group controlId="dueDateInput">
+                <Form.Group controlId="dueDateField">
                     <Form.Label>Due Date</Form.Label> <br/>
                     <Form.Control type="date" className="w-85" id="dueDateField" />            
                 </Form.Group>
