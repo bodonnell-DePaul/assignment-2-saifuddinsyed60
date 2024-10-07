@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import TodoList from "./TodoList";
 import './ViewPort.css';
-import ToDoCreator from "./TodoCreator";
+import TodoCreator from "./TodoCreator";
 
 function ViewPort(){
     return (
@@ -13,7 +13,7 @@ function ViewPort(){
             </Row>
             <br/><br/>
             <Row>
-                <Col xs={4}><ToDoCreator></ToDoCreator></Col>
+                <Col xs={4}><TodoCreator></TodoCreator></Col>
                 <Col xs={8}><TodoList></TodoList></Col>
             </Row>
         </Container>
