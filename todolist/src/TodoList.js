@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { ListGroup } from "react-bootstrap";
 import { Tab, Row, Col, Nav } from "react-bootstrap";
-import itemData from './itemList.json'
+//import itemData from './itemList.json'
+import {todos} from './todoItems.js'
 
 function Scheduler() {
 
-  const [items, setItems] = useState(itemData);
+  const [items, setItems] = useState(todos);
 
   const handleBlur = (index, e) => {
     // Save the description when the contentEditable loses focus

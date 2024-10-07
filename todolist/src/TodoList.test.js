@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import TodoList from './TodoList';
-import ToDoCreator from './ToDoCreator';
+import ToDoCreator from './TodoCreator';
 import ViewPort from './ViewPort';
 
 describe('TodoList Component', () => {

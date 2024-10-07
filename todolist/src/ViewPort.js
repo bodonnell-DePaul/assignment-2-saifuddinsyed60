@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import TodoList from "./TodoList";
 import './ViewPort.css';
-import ToDoCreator from "./ToDoCreator";
+import ToDoCreator from "./TodoCreator";
 
 function ViewPort(){
     return (
